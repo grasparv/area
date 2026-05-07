@@ -74,7 +74,7 @@ area run <name>
 This runs:
 
 ```text
-/usr/local/bin/area-guest
+/bin/area-guest
 ```
 
 inside the area.
