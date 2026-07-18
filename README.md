@@ -114,6 +114,7 @@ When available, Area forwards host resources such as:
 - Wayland
 - audio (PipeWire/PulseAudio)
 - GPU DRI
+- NVIDIA GPUs through CDI, when both the host GPU and a CDI specification are available
 
 Area can display GUI apps on your desktop and use your graphics/audio stack, but it does not try to authenticate into or participate in your desktop session.
 

@@ -125,6 +125,7 @@ func create(ctrl *podman.PodmanController, n *area.Area, conf *area.Config) (*po
 
 	addHostResourceDisplay(&spec)
 	addHostResourceDRI(&spec)
+	addHostResourceNVIDIA(&spec)
 	if addHostResourceXdg(&spec) {
 		addHostResourceXdgWayland(&spec)
 		addHostResourceXdgPulse(&spec)

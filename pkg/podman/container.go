@@ -13,6 +13,7 @@ type ContainerSpec struct {
 	Image        string
 	Labels       map[string]string
 	SecurityOpts []string
+	Devices      []string
 	Network      string
 	Binds        []string
 	Envs         []string
@@ -74,6 +75,9 @@ func (c *Container) Create(spec ContainerSpec) error {
 	}
 	for _, securityOpt := range spec.SecurityOpts {
 		args = append(args, "--security-opt", securityOpt)
+	}
+	for _, device := range spec.Devices {
+		args = append(args, "--device", device)
 	}
 	if spec.Network != "" {
 		args = append(args, "--network", spec.Network)
